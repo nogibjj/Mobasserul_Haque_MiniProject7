@@ -13,8 +13,8 @@ setup(
         "python-dotenv",
     ],
     entry_points={
-        'console_scripts': [
-            'etl_query=main:main',
+        "console_scripts": [
+            "etl_query=main:main",
         ],
     },
 )
