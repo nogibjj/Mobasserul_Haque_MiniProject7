@@ -152,3 +152,23 @@ SELECT
 [Row(Major='OPERATIONS LOGISTICS AND E-COMMERCE', Undergrad_Employed=10027, Grad_Employed=12659, Undergrad_Unemployment_Rate=0.04785870388150215, Grad_Unemployment_Rate=0.02284832112491131, Salary_Premium=44000), Row(Major='OPERATIONS LOGISTICS AND E-COMMERCE', Undergrad_Employed=10027, Grad_Employed=12659, Undergrad_Unemployment_Rate=0.04785870388150215, Grad_Unemployment_Rate=0.02284832112491131, Salary_Premium=44000), Row(Major='OPERATIONS LOGISTICS AND E-COMMERCE', Undergrad_Employed=10027, Grad_Employed=12659, Undergrad_Unemployment_Rate=0.04785870388150215, Grad_Unemployment_Rate=0.02284832112491131, Salary_Premium=44000), Row(Major='OPERATIONS LOGISTICS AND E-COMMERCE', Undergrad_Employed=10027, Grad_Employed=12659, Undergrad_Unemployment_Rate=0.04785870388150215, Grad_Unemployment_Rate=0.02284832112491131, Salary_Premium=44000), Row(Major='OPERATIONS LOGISTICS AND E-COMMERCE', Undergrad_Employed=10027, Grad_Employed=12659, Undergrad_Unemployment_Rate=0.04785870388150215, Grad_Unemployment_Rate=0.02284832112491131, Salary_Premium=44000)]
 ```
 
+```sql
+
+SELECT rg.Major, rg.Total AS Total_Undergrad_Grads, gs.Grad_total AS Total_Grad_Students, rg.Median AS Undergrad_Median_Salary, gs.Grad_median AS Grad_Median_Salary FROM RecentGradsDB rg JOIN GradStudentsDB gs ON rg.Major_code = gs.Major_code WHERE rg.Total > 10000 ORDER BY rg.Total DESC, rg.Median DESC LIMIT 5;
+
+```
+
+```response from databricks
+[Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000)]
+```
+
+```sql
+
+SELECT rg.Major, rg.Total AS Total_Undergrad_Grads, gs.Grad_total AS Total_Grad_Students, rg.Median AS Undergrad_Median_Salary, gs.Grad_median AS Grad_Median_Salary FROM RecentGradsDB rg JOIN GradStudentsDB gs ON rg.Major_code = gs.Major_code WHERE rg.Total > 10000 ORDER BY rg.Total DESC, rg.Median DESC LIMIT 5;
+
+```
+
+```response from databricks
+[Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000), Row(Major='BUSINESS MANAGEMENT AND ADMINISTRATION', Total_Undergrad_Grads=329927, Total_Grad_Students=813399, Undergrad_Median_Salary=38000, Grad_Median_Salary=77000)]
+```
+

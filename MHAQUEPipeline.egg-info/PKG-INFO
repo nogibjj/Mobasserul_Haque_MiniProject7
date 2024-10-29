@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: MHAQUEPipeline
+Version: 0.1.0
+Summary: ETLpipline
+Author: Mobasserul Haque
+Author-email: mh720@duke.edu
+Requires-Dist: databricks-sql-connector
+Requires-Dist: pandas
+Requires-Dist: python-dotenv
